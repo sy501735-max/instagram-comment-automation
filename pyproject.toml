@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "instagram-comment-automation"
+version = "1.0.0"
+description = "인스타그램 댓글 자동 분류 및 맞춤 답글 생성 시스템"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+keywords = ["instagram", "comment", "automation", "reply", "sns", "beauty", "salon"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+instagram-comment = "src.main:main"
+
+[project.urls]
+Homepage = "https://github.com/sy501735-max/instagram-comment-automation"
+Repository = "https://github.com/sy501735-max/instagram-comment-automation"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
